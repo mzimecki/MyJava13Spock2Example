@@ -2,9 +2,11 @@ package com.mzimecki
 
 
 import spock.lang.Specification
+import spock.lang.Unroll
 
 class TextUtilsSpockTest extends Specification {
 
+    @Unroll
     def 'should return text length' () {
         given:
         def textUtils = new TextUtils()
