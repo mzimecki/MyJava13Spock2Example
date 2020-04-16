@@ -1,6 +1,5 @@
-package com.zimek;
+package com.mzimecki;
 
-import com.mzimecki.TextUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
