@@ -25,20 +25,20 @@ public class TextUtilsJunitTest {
         assertEquals(expectedLength, length, 0.0);
     }
 
-    @Test
-    public void should_throw_exception_for_null_text() {
-        //when
-        final TextUtils textUtils = new TextUtils();
-        Assertions.assertThrows(IllegalArgumentException.class,
-                () -> textUtils.getStringLength(null));
-    }
-
     private static Stream<Arguments> stringIntProvider() {
         return Stream.of(
                 arguments("", 0),
                 arguments("one", 3),
                 arguments("Monday", 6),
                 arguments("Three", 5));
+    }
+
+    @Test
+    public void should_throw_exception_for_null_text() {
+        //when
+        final TextUtils textUtils = new TextUtils();
+        Assertions.assertThrows(IllegalArgumentException.class,
+                () -> textUtils.getStringLength(null));
     }
 
 }
