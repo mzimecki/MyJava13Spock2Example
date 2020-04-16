@@ -1,6 +1,8 @@
 package com.zimek;
 
 import com.mzimecki.TextUtils;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -21,6 +23,14 @@ public class TextUtilsJunitTest {
 
         //then
         assertEquals(expectedLength, length, 0.0);
+    }
+
+    @Test
+    public void should_throw_exception_for_null_text() {
+        //when
+        final TextUtils textUtils = new TextUtils();
+        Assertions.assertThrows(IllegalArgumentException.class,
+                () -> textUtils.getStringLength(null));
     }
 
     private static Stream<Arguments> stringIntProvider() {

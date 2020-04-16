@@ -45,15 +45,14 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version><!-- 3.6.2 is the minimum -->
+                <version>3.8.1</version>
                 <configuration>
                     <release>13</release>
                     <compilerId>groovy-eclipse-compiler</compilerId>
                     <compilerArguments>
-                        <indy/><!-- optional; supported by batch 2.4.12-04+ -->
-                        <!--configScript>config.groovy</configScript--><!-- optional; supported by batch 2.4.13-02+ -->
+                        <indy/>
                     </compilerArguments>
-                    <failOnWarning>false</failOnWarning><!-- optional; supported by batch 2.5.8-02+ -->
+                    <failOnWarning>false</failOnWarning>
                 </configuration>
                 <dependencies>
                     <dependency>

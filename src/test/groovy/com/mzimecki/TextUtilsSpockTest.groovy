@@ -24,4 +24,15 @@ class TextUtilsSpockTest extends Specification {
         "Hello"  | 5
         "Monday" | 6
     }
+
+    def 'should throw exception for null text' () {
+        given:
+        def textUtils = new TextUtils()
+
+        when:
+        textUtils.getStringLength(null)
+
+        then:
+        thrown(IllegalArgumentException)
+    }
 }
